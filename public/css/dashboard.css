@@ -1,0 +1,18 @@
+.dropdown-item:hover {
+    color: #009688;
+}
+
+.btn-xs {
+    margin-left: 5%;
+    margin-bottom: 8px;
+}
+
+.btn-delete {
+    color: #FFF;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-delete:hover {
+    color: #FFF;
+}
