@@ -11,7 +11,7 @@ use App\Category;
 use Auth;
 
 
-class PostsController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -164,7 +164,9 @@ class PostsController extends Controller
                 'category_id' => $insertCategory->id,
                 'language' => $request->language,
                 'publisher' => $request->publisher,
-                'book_price' => $request->book_price
+                'book_price' => $request->book_price,
+                'stock' => $request->stock,
+                'user_id' => Auth::user()->id,
             ];
             
             $insert = $book->update($fields);

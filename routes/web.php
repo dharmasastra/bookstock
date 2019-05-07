@@ -19,16 +19,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
     Route::get('/', 'Dashboard\AdminController@index');
 
-    Route::resource('posts', 'Dashboard\PostsController')->except([
+    Route::resource('posts', 'Dashboard\BookController')->except([
         'edit', 'destroy', 'update', 'show'
     ]);
-    // Route::get('posts/add', 'Dashboard\PostsController@create')->name('admin.posts.add');
-    // Route::get('posts/list', 'Dashboard\PostsController@index')->name('admin.posts.index');
-    Route::get('posts/{isbn}/edit', 'Dashboard\PostsController@edit')->name('posts.edit');
-    Route::get('posts/{isbn}', 'Dashboard\PostsController@show')->name('posts.show');
-    Route::delete('posts/{isbn}', 'Dashboard\PostsController@destroy')->name('posts.destroy');
-    Route::put('posts/{isbn}', 'Dashboard\PostsController@update')->name('posts.update');
-    Route::get('data-buku', 'Dashboard\PostsController@dataBuku');
+    // Route::get('posts/add', 'Dashboard\BookController@create')->name('admin.posts.add');
+    // Route::get('posts/list', 'Dashboard\BookController@index')->name('admin.posts.index');
+    Route::get('posts/{isbn}/edit', 'Dashboard\BookController@edit')->name('posts.edit');
+    Route::get('posts/{isbn}', 'Dashboard\BookController@show')->name('posts.show');
+    Route::delete('posts/{isbn}', 'Dashboard\BookController@destroy')->name('posts.destroy');
+    Route::put('posts/{isbn}', 'Dashboard\BookController@update')->name('posts.update');
+    Route::get('data-buku', 'Dashboard\BookController@dataBuku');
 
     Route::resource('categories', 'Dashboard\CategoryController');
     // Route::get('category/add', 'Dashboard\CategoryController@create')->name('admin.categories.add');
