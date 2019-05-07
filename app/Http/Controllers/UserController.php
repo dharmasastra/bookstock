@@ -26,7 +26,7 @@ class UserController extends Controller
         ->addColumn('action', function ($user) 
         {
             $html = '';
-            $html .= '<a href="'.route("users.destroy", ["user"=>$user->id]).'" class="btn btn-xs btn-delete " id="delete">Delete</a>'; 
+            $html .= '<a href="'.route("users.destroy", ["user"=>$user->id]).'" class="btn btn-xs btn-delete delete">Delete</a>'; 
             
             return $html;
         })

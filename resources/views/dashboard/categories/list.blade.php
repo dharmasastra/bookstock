@@ -42,7 +42,7 @@
 
                   ],
             drawCallback: function ( setting ) {
-              $('#delete').click(function(e){
+              $('.delete').click(function(e){
                 e.preventDefault();
                 let url = $(this).attr('href');
                 swal({

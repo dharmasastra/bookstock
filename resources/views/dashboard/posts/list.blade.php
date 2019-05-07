@@ -27,6 +27,7 @@
                     <th>Author</th>
                     <th>Language</th>
                     <th>Stock</th>
+                    <th>User</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -54,6 +55,7 @@
                     { data: 'author', name: 'author' },
                     { data: 'language', name: 'language'},
                     { data: 'stock', name: 'stock'},
+                    { data: 'user.username', name: 'user.username'},
                     {data: 'action', name: 'action', orderable: false, searchable: false}
 
                   ],

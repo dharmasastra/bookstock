@@ -26,7 +26,7 @@ class Book extends Model
         return $this->belongsTo('App\Category', 'category_id');
     }
 
-    public function users() {
+    public function user() {
         return $this->belongsTO('App\User', 'user_id');
     }
 } 

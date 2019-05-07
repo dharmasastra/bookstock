@@ -29,7 +29,7 @@ class BookController extends Controller
 
         $scope = $user->role == 'ADMIN' ? Book::query() : $user->books();
 
-        return Datatables::of($scope)
+        return Datatables::of($scope->with("user"))
         ->addColumn('action', function ($book) 
         {
             $html = '';
@@ -42,6 +42,7 @@ class BookController extends Controller
         ->addIndexColumn()
         ->make(true);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -107,7 +108,7 @@ class BookController extends Controller
      */
     public function show($isbn)
     {
-        $post = Book::where('isbn_no', $isbn)->first();
+        $post = Book::where('isbn_no', $isbn)->with('user')->first();
         $categories = Category::all();
         return view('dashboard.posts.index')
         -> with(['post'=>$post])

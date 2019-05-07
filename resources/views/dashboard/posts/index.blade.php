@@ -39,8 +39,10 @@
                                     <p>Lenguage</p>
                                     <p>Publisher</p>
                                     <p>Stock</p>
+                                    <p>User</p>
                                 </div>
                                 <div class="col-sm-1 text-center">
+                                    <p>:</p>
                                     <p>:</p>
                                     <p>:</p>
                                     <p>:</p>
@@ -58,6 +60,7 @@
                                     <p>{{$post->language}}</p>
                                     <p>{{$post->publisher}}</p>
                                     <p>{{$post->stock}}</p>
+                                    <p>{{$post->user['username']}}</p>
                                 </div>
                             </div>
                         </div>

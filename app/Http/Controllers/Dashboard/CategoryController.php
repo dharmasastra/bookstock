@@ -23,7 +23,7 @@ class CategoryController extends Controller
         return Datatables::of(Category::query())
         ->addColumn('action', function ($categories) {
             $html = '<a href="'.route("categories.edit", ["id"=>$categories->id]).'" class="btn btn-xs btn-primary">Edit</a>';
-            $html .= '<a href="'.route("categories.destroy", ["id"=>$categories->id]).'" class="btn btn-xs btn-delete" id="delete">Delete</a>'; 
+            $html .= '<a href="'.route("categories.destroy", ["id"=>$categories->id]).'" class="btn btn-xs btn-delete delete">Delete</a>'; 
             return $html;
         })
         ->addIndexColumn()

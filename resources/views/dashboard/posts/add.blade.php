@@ -104,7 +104,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label">Stock</label>
-                            <input type="text" name="stock" class="form-control" required>
+                            <input type="number" name="stock" class="form-control" required>
                         </div>
                         <div class="tile-footer">
                             <button type="submit" class="btn btn-primary">Save</button>
