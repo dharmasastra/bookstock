@@ -31,17 +31,19 @@
                                 <hr>
                             </div>
                             <div class="row">
-                                <div class="col-sm-2 text-left">
+                                <div class="col-sm-3 text-left">
                                     <p>Price</p>
                                     <p>Format</p>
                                     <p>ISBN</p>
                                     <p>Tanggal Terbit</p>
+                                    <p>Category</p>
                                     <p>Lenguage</p>
                                     <p>Publisher</p>
                                     <p>Stock</p>
                                     <p>User</p>
                                 </div>
                                 <div class="col-sm-1 text-center">
+                                    <p>:</p>
                                     <p>:</p>
                                     <p>:</p>
                                     <p>:</p>
@@ -57,6 +59,7 @@
                                     <p>{{$post->format}}</p>
                                     <p>{{$post->isbn_no}}</p>
                                     <p>{{$post->publication_date}}</p>
+                                    <p>{{$post->categories->category_name}}</p>
                                     <p>{{$post->language}}</p>
                                     <p>{{$post->publisher}}</p>
                                     <p>{{$post->stock}}</p>

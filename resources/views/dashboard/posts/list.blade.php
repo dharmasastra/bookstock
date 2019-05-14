@@ -25,6 +25,7 @@
                     <th>ISBN</th>
                     <th>Book Name</th>
                     <th>Author</th>
+                    <th>Category</th>
                     <th>Language</th>
                     <th>Stock</th>
                     <th>User</th>
@@ -53,6 +54,7 @@
                     { data: 'isbn_no', name: 'isbn_no'},
                     { data: 'book_name', name: 'book_name' },
                     { data: 'author', name: 'author' },
+                    { data: 'categories.category_name', name: 'categories.category_name'},
                     { data: 'language', name: 'language'},
                     { data: 'stock', name: 'stock'},
                     { data: 'user.username', name: 'user.username'},

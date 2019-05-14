@@ -27,7 +27,7 @@ class BookController extends Controller
     {
         $user = Auth::user();
 
-        $scope = $user->role == 'ADMIN' ? Book::query() : $user->books();
+        $scope = $user->role == 'ADMIN' ? Book::with('categories') : $user->books()->with('categories');
 
         return Datatables::of($scope->with("user"))
         ->addColumn('action', function ($book) 
@@ -60,7 +60,7 @@ class BookController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function store(Request $request)
     {
 
